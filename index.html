@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<h2>Test</h2>
+<script type="text/javascript">
+var remote = require('electron').remote;
+document.addEvenListener('keydown', function (e) {
+    if (e.which === 123) {
+        remote.getCurrentWindow().webContents.openDevTools();
+    } else if (e.which === 116) {
+        location.reload();
+    }
+    
+
+});
+</script>
+</body>
+</html>
